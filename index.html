@@ -55,17 +55,19 @@
               <div class="time-box"><span id="ss">00</span><label>Secondes</label></div>
             </div>
 
-            <form name="contact" method="POST" data-netlify="true">
-              <p>
-                <label>Your Name: <input type="text" name="name" /></label>
-              </p>
-              <p>
-                <label>Your Email: <input type="email" name="email" /></label>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
+            <form id="lead-form" class="lead-form" name="contact" method="POST" data-netlify="true" novalidate>
+              <div class="input-group">
+                <label for="firstName">Prénom</label>
+                <input id="firstName" name="firstName" type="text" autocomplete="given-name" placeholder="Votre prénom" required />
+              </div>
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="votre@email.com" required />
+              </div>
+              <button id="submitBtn" type="submit" class="btn-primary">Valider</button>
+              <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
             </form>
+
 
             <div class="trust">
               <div class="trust-item">★ ★ ★ ★ ★ &nbsp;<span>Note 5/5 par les premiers bêta-testeurs</span></div>
