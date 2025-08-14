@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lancement — Cours de gestion Airbnb</title>
+    <meta name="description" content="Lancement imminent de mes cours de gestion Airbnb. Rejoignez le live pour poser vos questions et démarrez votre activité rentable. Inscrivez-vous maintenant." />
+    <meta name="theme-color" content="#36A2B0" />
+
+    <meta property="og:title" content="Lancement — Cours de gestion Airbnb" />
+    <meta property="og:description" content="Live Q&A de lancement. Réservez votre place : prénom + email." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">◆</span>
+          <span class="brand-name">Airbnb Management</span>
+        </div>
+        <nav class="nav">
+          <a href="#programme">Programme</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav-cta" href="#inscription">S'inscrire</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="bg-decor" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="badge">Lancement bientôt · Live Q&A</p>
+            <h1>
+              Devenez gestionnaire Airbnb
+              <span class="accent">en 90 jours</span>
+            </h1>
+            <p class="subhead">
+              La meilleure formation de management Airbnb francophone arrive. Pour tout vous dévoiler et répondre à vos questions, nous organisons un live exclusif.
+              Réservez votre place dès maintenant.
+            </p>
+
+            <div class="countdown" role="timer" aria-live="polite">
+              <div class="time-box"><span id="dd">00</span><label>Jours</label></div>
+              <div class="time-box"><span id="hh">00</span><label>Heures</label></div>
+              <div class="time-box"><span id="mm">00</span><label>Minutes</label></div>
+              <div class="time-box"><span id="ss">00</span><label>Secondes</label></div>
+            </div>
+
+            <form id="lead-form" class="lead-form" novalidate>
+              <div class="input-group">
+                <label for="firstName">Prénom</label>
+                <input id="firstName" name="firstName" type="text" autocomplete="given-name" placeholder="Votre prénom" required />
+              </div>
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="votre@email.com" required />
+              </div>
+              <button id="submitBtn" type="submit" class="btn-primary">Valider</button>
+              <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="trust">
+              <div class="trust-item">★ ★ ★ ★ ★ &nbsp;<span>Note 5/5 par les premiers bêta-testeurs</span></div>
+              <div class="trust-item">🔒 &nbsp;<span>Vos données restent privées</span></div>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Informations sur le live">
+            <h3>Live de lancement</h3>
+            <ul class="event-list">
+              <li>Format : Questions / Réponses, démo et feuille de route</li>
+              <li>Durée : environ 1h</li>
+              <li>Bonus : feuille de calcul de rentabilité offerte</li>
+            </ul>
+            <a id="calendarLink" class="link-calendar" href="#">+ Ajouter au calendrier</a>
+          </aside>
+        </div>
+      </section>
+
+      <section id="programme" class="features">
+        <div class="container">
+          <h2>Ce que vous allez apprendre...</h2>
+          <div class="grid">
+            <div class="card">
+              <div class="icon">🏠</div>
+              <h3>Signer des clients</h3>
+              <p>On vous donne les meilleures techniques pour décrocher rapidement vos premiers contrats.</p>
+            </div>
+            <div class="card">
+              <div class="icon">📈</div>
+              <h3>Maximiser les revenus</h3>
+              <p>Stratégies de prix, remplissage optimal et upsells pour augmenter votre chiffre d’affaires.</p>
+            </div>
+            <div class="card">
+              <div class="icon">🤝</div>
+              <h3>Gérer comme un pro</h3>
+              <p>Outils, automatisations et méthodes pour offrir un service irréprochable sans y passer vos journées.</p>
+            </div>
+            <div class="card">
+              <div class="icon">🧭</div>
+              <h3>Roadmap claire</h3>
+              <p>Un plan d'action étape par étape pour passer de 0 à une conciergerie rentable en quelques semaines.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="inscription">
+        <div class="container cta-inner">
+          <h2>Prenez une longueur d'avance</h2>
+          <p>Entrez votre prénom et votre email pour recevoir l'accès au live !</p>
+          <form id="lead-form-bottom" class="lead-form" novalidate>
+            <div class="input-group">
+              <label for="firstName2">Prénom</label>
+              <input id="firstName2" name="firstName" type="text" autocomplete="given-name" placeholder="Votre prénom" required />
+            </div>
+            <div class="input-group">
+              <label for="email2">Email</label>
+              <input id="email2" name="email" type="email" autocomplete="email" placeholder="votre@email.com" required />
+            </div>
+            <button id="submitBtn2" type="submit" class="btn-primary">Valider</button>
+            <p id="formMessage2" class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="faq" class="faq">
+        <div class="container">
+          <h2>FAQ</h2>
+          <details>
+            <summary>Le live est-il vraiment gratuit ?</summary>
+            <p>Oui, 100% gratuit. L'objectif est de vous aider à saisir l'opportunité et répondre à vos questions.</p>
+          </details>
+          <details>
+            <summary>Y aura-t-il un replay ?</summary>
+            <p>Non il n'y aura pas de replay ! Ne rate pas cette opportunité unique et inscris toi dès maintenant.</p>
+          </details>
+          <details>
+            <summary>Quelle est la date exacte ?</summary>
+            <p>La date est affichée sur cette page. Vous recevrez un rappel par email avec le lien d'accès.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Airbnb Management — Tous droits réservés</div>
+        <div class="footer-links">
+          <a href="#">Mentions légales</a>
+          <a href="#">Confidentialité</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
