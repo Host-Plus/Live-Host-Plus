@@ -48,6 +48,7 @@
               Réservez votre place dès maintenant.
             </p>
 
+            <!-- Formulaire fantôme pour que Netlify détecte -->
             <form name="contact" netlify hidden>
               <input type="text" name="firstName">
               <input type="email" name="email">
@@ -60,7 +61,8 @@
               <div class="time-box"><span id="ss">00</span><label>Secondes</label></div>
             </div>
 
-            <form id="lead-form" class="lead-form" name="contact" method="POST" data-netlify="true" novalidate>
+            <!-- Formulaire principal -->
+            <form class="lead-form" id="lead-form" name="contact" method="POST" data-netlify="true" novalidate>
               <input type="hidden" name="form-name" value="contact">
               <div class="input-group">
                 <label for="firstName">Prénom</label>
@@ -73,7 +75,6 @@
               <button id="submitBtn" type="submit" class="btn-primary">Valider</button>
               <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
             </form>
-
 
             <div class="trust">
               <div class="trust-item">★ ★ ★ ★ ★ &nbsp;<span>Note 5/5 par les premiers bêta-testeurs</span></div>
@@ -125,7 +126,10 @@
         <div class="container cta-inner">
           <h2>Prenez une longueur d'avance</h2>
           <p>Entrez votre prénom et votre email pour recevoir l'accès au live !</p>
-          <form id="lead-form-bottom" class="lead-form" novalidate>
+
+          <!-- Formulaire bas de page -->
+          <form id="lead-form-bottom" class="lead-form" name="contact" method="POST" data-netlify="true" novalidate>
+            <input type="hidden" name="form-name" value="contact">
             <div class="input-group">
               <label for="firstName2">Prénom</label>
               <input id="firstName2" name="firstName" type="text" autocomplete="given-name" placeholder="Votre prénom" required />
