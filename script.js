@@ -1,6 +1,6 @@
 (function() {
   const EVENT_DATE = new Date('2025-08-27T18:00:00+02:00');
-  // Paste your Google Apps Script Web App URL below
+  // Optionnel : ton URL Google Apps Script si tu veux aussi envoyer là-bas
   const APPS_SCRIPT_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
 
   function pad(num) {
@@ -52,12 +52,19 @@
       button.disabled = true;
       messageEl.textContent = 'Inscription en cours…';
 
-      setTimeout(function() {
+      // 👉 ENVOI À NETLIFY FORMS
+      fetch("/", {
+        method: "POST",
+        body: formData
+      })
+      .then(() => {
         try {
+          // Stockage local pour ton usage
           const leads = JSON.parse(localStorage.getItem('leads') || '[]');
           leads.push({ firstName, email, ts: Date.now() });
           localStorage.setItem('leads', JSON.stringify(leads));
-          // Fire-and-forget save to Google Sheets via Apps Script
+
+          // Fire-and-forget vers Google Sheets via Apps Script
           if (APPS_SCRIPT_URL && APPS_SCRIPT_URL.indexOf('http') === 0) {
             const payload = new FormData();
             payload.append('firstName', firstName);
@@ -76,8 +83,13 @@
 
         messageEl.textContent = 'Merci ! Vous êtes bien inscrit(e). Vous recevrez bientôt toutes les infos du live.';
         form.reset();
+      })
+      .catch(() => {
+        messageEl.textContent = 'Une erreur est survenue, merci de réessayer.';
+      })
+      .finally(() => {
         button.disabled = false;
-      }, 600);
+      });
     });
   }
 
