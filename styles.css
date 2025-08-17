@@ -334,7 +334,9 @@ body {
   .features .grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 34px; }
 }
+
+/* Décalage du contenu texte sans toucher au fond */
 .hero-copy {
   position: relative;
-  top: 80px; /* décale seulement le texte */
+  top: 80px;
 }
