@@ -334,3 +334,7 @@ body {
   .features .grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 34px; }
 }
+/* Décalage du contenu texte dans le hero */
+.hero-copy {
+  padding-top: 80px;
+}
