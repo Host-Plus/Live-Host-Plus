@@ -100,7 +100,7 @@
 
     const params = new URLSearchParams({
       action: 'TEMPLATE',
-      text: 'Live lancement — Devenez gestionnaire Airbnb en 60 jours',
+      text: 'Live — Deviens gestionnaire Airbnb en 60 jours',
       dates: start + '/' + end,
       details: "Pas de replay, pas de deuxième chance. C’est mercredi soir en live – ou jamais.",
       location: 'En ligne'
