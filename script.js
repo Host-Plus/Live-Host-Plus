@@ -102,7 +102,7 @@
       action: 'TEMPLATE',
       text: 'Live — Deviens gestionnaire Airbnb en 60 jours',
       dates: start + '/' + end,
-      details: "Pas de replay, pas de deuxième chance. C’est mercredi soir en live – ou jamais.",
+      details: "Voici le lien : https://meet.google.com/kmx-eibt-rbn. Il n' aura pas de replay, pas de deuxième chance. C’est mercredi soir en live – ou jamais.",
       location: 'En ligne'
     });
     return 'https://www.google.com/calendar/render?' + params.toString();
