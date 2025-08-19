@@ -100,9 +100,9 @@
 
     const params = new URLSearchParams({
       action: 'TEMPLATE',
-      text: 'Live lancement — Cours gestion Airbnb',
+      text: 'Live lancement — Devenez gestionnaire Airbnb en 60 jours',
       dates: start + '/' + end,
-      details: "Live de lancement : Q&A + feuille de route. Inscrivez-vous pour recevoir le lien.",
+      details: "Pas de replay, pas de deuxième chance. C’est mercredi soir en live – ou jamais.",
       location: 'En ligne'
     });
     return 'https://www.google.com/calendar/render?' + params.toString();
